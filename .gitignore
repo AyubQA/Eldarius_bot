@@ -1,0 +1,40 @@
+# Бинарные файлы
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+birthday-bot
+
+# Тестовые бинарные файлы
+*.test
+
+# Выходные данные профилировщика
+*.prof
+
+# Файлы базы данных
+*.db
+*.db-journal
+
+# Файлы окружения
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Логи
+*.log
+
+# Зависимости
+/vendor/
+
+# OS specific
+.DS_Store
+Thumbs.db 

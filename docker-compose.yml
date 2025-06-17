@@ -1,0 +1,14 @@
+services:
+  bot:
+    build: .
+    container_name: birthday-bot
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3" 
