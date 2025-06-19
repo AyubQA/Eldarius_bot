@@ -2,6 +2,10 @@ name: birthday-bot
 image: cr.yandex/crp2gf3gm8rv83kfkvet/amvera-ayub-eldarius
 appPort: 80
 
+meta:
+  environment: docker
+  toolchain: docker
+
 build:
   dockerfile: Dockerfile
   context: .
@@ -17,20 +21,11 @@ volumes:
     path: /app/data
     size: 1Gi
 
-restart_policy:
-  condition: on-failure
-  max_retries: 5
-  delay: 10s
-
 env:
   - name: DATABASE_PATH
     value: /app/data/birthdays.db
   - name: TELEGRAM_BOT_TOKEN
     value: ${TELEGRAM_BOT_TOKEN}
-
-meta:
-  environment: docker
-  toolchain: docker
 
 run:
   persistenceMount: /app/data
