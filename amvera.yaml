@@ -1,6 +1,4 @@
 name: birthday-bot
-image: cr.yandex/crp2gf3gm8rv83kfkvet/amvera-ayub-eldarius
-appPort: 80
 
 meta:
   environment: golang
@@ -32,8 +30,4 @@ env:
 
 run:
   persistenceMount: /app/data
-  containerPort: 80
-  
-registry:
-  image: birthday-bot
-  tag: latest 
+  containerPort: 80 
