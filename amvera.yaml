@@ -1,12 +1,12 @@
 name: birthday-bot
-type: docker
+image: cr.yandex/crp2gf3gm8rv83kfkvet/amvera-ayub-eldarius
+appPort: 80
 
 build:
-  context: .
   dockerfile: Dockerfile
+  context: .
   args:
     - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-  skip: false
 
 resources:
   cpu: 0.2
