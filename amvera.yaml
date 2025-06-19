@@ -3,8 +3,11 @@ image: cr.yandex/crp2gf3gm8rv83kfkvet/amvera-ayub-eldarius
 appPort: 80
 
 meta:
-  environment: docker
-  toolchain: docker
+  environment: golang
+  toolchain:
+    name: go
+    version: 1.24
+    
 
 build:
   dockerfile: Dockerfile
